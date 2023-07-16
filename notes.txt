@@ -1,0 +1,8 @@
+in this project we want the server to hv 3 routes:
+/ -> index.html
+/hello -> hello func
+/form -> form func -> form.html
+
+usually in web programming index.html is universal naming for other language (java, etc)
+
+request is what the client send to the server and response is what the server send back

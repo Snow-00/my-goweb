@@ -36,7 +36,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
   // this will tell Go to search index.html (default) in static dir
-  fileServer := http.FileServer(http.Dir("./static))
+  fileServer := http.FileServer(http.Dir("./static"))
   http.Handle("/", fileServer)   // root route
   http.HandleFunc("/form", formHandler)  // form route
   http.HandleFunc("/hello", helloHandler)  // hello route
@@ -44,7 +44,7 @@ func main() {
   fmt.Printf("Starting server at port 8000\n")
 
   // to create server
-  if err := http.ListenAndServe(":8000", nil); err !nil {
+  if err := http.ListenAndServe(":8000", nil); err != nil {
     log.Fatal(err)
   }
 }
